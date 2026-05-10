@@ -5,7 +5,7 @@ const LeadList = ({ leads, fetchLeads }) => {
   const [editingId, setEditingId] = useState(null);
 
   const updateStatus = async (id, status) => {
-    await fetch(`https://lrm-1-tyhi.onrender.com/api/leads/${id}`, {
+    await fetch(`http://localhost:5000/api/leads/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ status })
@@ -16,7 +16,7 @@ const LeadList = ({ leads, fetchLeads }) => {
   };
 
   const deleteLead = async (id) => {
-    await fetch(`https://lrm-1-tyhi.onrender.com/api/leads/${id}`, {
+    await fetch(`http://localhost:5000/api/leads/${id}`, {
       method: 'DELETE'
     });
     fetchLeads();
