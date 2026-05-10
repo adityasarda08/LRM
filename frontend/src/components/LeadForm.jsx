@@ -23,7 +23,7 @@ const LeadForm = ({ fetchLeads }) => {
     }
 
     try {
-      await fetch('http://localhost:5000/api/leads', {
+      await fetch('https://lrm-1-tyhi.onrender.com/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
