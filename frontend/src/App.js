@@ -9,7 +9,7 @@ function App() {
 
   const fetchLeads = async () => {
     try {
-      const res = await fetch("https://lrm-xm86.onrender.com/api/leads");
+      const res = await fetch("http://localhost:5000/api/leads");
       const data = await res.json();
       setLeads(data);
     } catch (err) {
